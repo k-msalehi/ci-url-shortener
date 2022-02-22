@@ -46,7 +46,7 @@ $routes->group('admin/redirect', function ($routes) {
     $routes->add('export', 'Admin\Redirect::index');
 });
 
-
+$routes->get('login', 'Auth\login', ['as' => 'login']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

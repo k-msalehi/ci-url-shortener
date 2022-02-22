@@ -51,7 +51,15 @@ class BaseController extends Controller
         // Preload any models, libraries, etc, here.
         // E.g.: $this->session = \Config\Services::session();
         $this->users = [
-            'uesr' => 'admin'
+            'user' => '$2a$10$w4Ljxtdh8Fqy1IP7RSCsUO7rabD7/Wv5EpQG8aE/hrGAhSKN8o95u' // admin //10 cost
+           
         ];
+        if (strpos(uri_string(), 'admin/') === 0) {
+            $session = session();
+            if (!$session->get('username')) {
+                header('location:/auth/login');
+                exit();
+            }
+        }
     }
 }
