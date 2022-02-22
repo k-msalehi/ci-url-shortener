@@ -32,7 +32,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Redirect::index');
-$routes->get('(:segment)', 'Redirect::index/$1');
+$routes->get('(:segment)', 'Redirect::redirect/$1');
 
 /*
  * --------------------------------------------------------------------

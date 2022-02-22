@@ -7,7 +7,7 @@ use App\Models\RedirectModel;
 
 class Redirect extends BaseController
 {
-    public function index($from='')
+    public function redirect($from='')
     {
         $redirect = model(RedirectModel::class);
         $redirect = $redirect->where('from',$from)->findAll(1);
