@@ -34,6 +34,22 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Redirect::index');
 $routes->get('(:segment)', 'Redirect::redirect/$1');
 
+$routes->group('admin/redirect', function ($routes) {
+    $routes->add('', 'Admin\Redirect::index');
+    $routes->add('add', 'Admin\Redirect::index');
+    $routes->add('insert', 'Admin\Redirect::index');
+    $routes->add('insert_validation', 'Admin\Redirect::index');
+    $routes->add('edit/(:num)', 'Admin\Redirect::index');
+    $routes->add('update_validation/(:num)', 'Admin\Redirect::index');
+    $routes->add('update/(:num)', 'Admin\Redirect::index');
+    $routes->add('success/(:num)', 'Admin\Redirect::index');
+    $routes->add('delete/(:num)', 'Admin\Redirect::index');
+    $routes->add('ajax_list_info', 'Admin\Redirect::index');
+    $routes->add('ajax_list', 'Admin\Redirect::index');
+    $routes->add('export', 'Admin\Redirect::index');
+});
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

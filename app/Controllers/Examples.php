@@ -94,6 +94,14 @@ class Examples extends BaseController
     }
 
 
+    public function red()
+    {
+        $crud = new GroceryCrud();
+        $crud->setTable('redirects');
+        $output = $crud->render();
+
+        return $this->_exampleOutput($output);        
+    }
     private function _exampleOutput($output = null) {
         return view('example', (array)$output);
     }

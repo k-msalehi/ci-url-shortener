@@ -16,9 +16,9 @@ class Redirect extends BaseController
     public function redirect($from = '')
     {
         $redirect = model(RedirectModel::class);
-        $redirect = $redirect->where('from', $from)->findAll(1);
+        $redirect = $redirect->where('from', $from)->first();
         if ($redirect)
-            return redirect()->to($redirect[0]['to']);
+            return redirect()->to($redirect['to']);
         throw PageNotFoundException::forPageNotFound('URL not exist.');
     }
 }

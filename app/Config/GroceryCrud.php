@@ -56,7 +56,7 @@ class GroceryCrud
      * The environment is important so we can have specific configurations for specific environments
      * @var string
      */
-    public $environment = 'production';
+    public $environment = 'development';
 
     /**
      * Turn XSS clean into true in case you are exposing your CRUD into public. Please be aware that this is
