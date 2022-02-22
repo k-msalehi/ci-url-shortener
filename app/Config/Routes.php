@@ -31,9 +31,6 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Redirect::index');
-$routes->get('(:segment)', 'Redirect::redirect/$1');
-
 $routes->group('admin/redirect', function ($routes) {
     $routes->add('', 'Admin\Redirect::index');
     $routes->add('add', 'Admin\Redirect::index');
