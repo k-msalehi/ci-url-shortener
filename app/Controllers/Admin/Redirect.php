@@ -8,6 +8,6 @@ class Redirect extends BaseController
 {
     public function index()
     {
-        //
+        
     }
 }
