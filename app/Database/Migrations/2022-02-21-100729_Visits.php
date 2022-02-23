@@ -18,6 +18,10 @@ class Visits extends Migration
                 'type'           => 'INT',
                 'unsigned'       => true,
             ],
+            'user_id'          => [
+                'type'           => 'VARCHAR',
+                'constraint' => '23',
+            ],
             'os'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
@@ -25,6 +29,10 @@ class Visits extends Migration
             'browser'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
+            ],
+            'referrer'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '500',
             ],
             'extra'       => [
                 'type'       => 'VARCHAR',
