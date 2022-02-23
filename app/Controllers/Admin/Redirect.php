@@ -4,6 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Libraries\GroceryCrud;
+use App\Models\RedirectModel;
 
 class Redirect extends BaseController
 {
@@ -12,9 +13,14 @@ class Redirect extends BaseController
         $crud = new GroceryCrud();
         $crud->setTable('redirects');
         //$crud->columns(['from', 'to',]);        
-        $crud->setActionButton('stats', 'fa-solid fa-signal', function ($row) {
-            return "admin/redirect/stats/{$row}";
+        $crud->setActionButton('Stats', 'fa-solid fa-signal', function ($row) {
+            return "redirect/stats/{$row}";
         }, false);
+        $crud->setActionButton('Visit', 'fa-solid fa-eye', function ($row) {
+            $redirect = model(RedirectModel::class);
+            $redirect = $redirect->where('id', $row)->first();
+            return '/'. $redirect['from'];
+        }, true);
         //$crud->unsetDelete();
         // $crud->setTheme('datatables');
 
@@ -27,8 +33,4 @@ class Redirect extends BaseController
         return view('admin/redirect/index', (array)$output);
     }
 
-    private function _exampleOutput($output = null)
-    {
-        return view('example', (array)$output);
-    }
 }

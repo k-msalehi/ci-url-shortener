@@ -14,7 +14,10 @@ class RedirectModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'from',
+        'to',
+    ];
 
     // Dates
     protected $useTimestamps = false;
