@@ -14,7 +14,7 @@ class Redirect extends BaseController
         $crud->setTable('redirects');
         //$crud->columns(['from', 'to',]);        
         $crud->setActionButton('Stats', 'fa-solid fa-signal', function ($row) {
-            return "redirect/stats/{$row}";
+            return "/admin/redirect/stats/{$row}";
         }, false);
         $crud->setActionButton('Visit', 'fa-solid fa-eye', function ($row) {
             $redirect = model(RedirectModel::class);
@@ -31,6 +31,15 @@ class Redirect extends BaseController
 
         //  return $this->_exampleOutput($output);
         return view('admin/redirect/index', (array)$output);
+    }
+
+    public function stats($id)
+    {
+        $visit = model(VisitModel::class);
+        $data['redirect'] = model(RedirectModel::class)->find($id);
+
+        return view('admin/redirect/stats', $data);
+
     }
 
 }
