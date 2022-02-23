@@ -18,7 +18,8 @@ class VisitModel extends Model
         'redirect_id',
         'os',
         'browser',
-        'extra'
+        'extra',
+        'referrer'
     ];
 
     // Dates
