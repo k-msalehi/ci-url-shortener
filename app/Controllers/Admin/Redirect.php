@@ -9,13 +9,6 @@ class Redirect extends BaseController
 {
     public function index()
     {
-        // $crud = new GroceryCrud();
-        // $crud->setTable('redirects');
-        // $output = $crud->render();
-
-        // return $this->_exampleOutput($output);        
-
-
         $crud = new GroceryCrud();
         $crud->setTable('redirects');
         //$crud->columns(['from', 'to',]);        
@@ -23,7 +16,7 @@ class Redirect extends BaseController
             return "admin/redirect/stats/{$row}";
         }, false);
         //$crud->unsetDelete();
-       // $crud->setTheme('datatables');
+        // $crud->setTheme('datatables');
 
         $crud->requiredFields(['from', 'to']);
         $crud->uniqueFields(['from']);

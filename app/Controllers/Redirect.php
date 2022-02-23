@@ -10,8 +10,6 @@ class Redirect extends BaseController
 {
     public function index()
     {
-        echo route_to('login');
-        dd('stop');
         return redirect()->to(MAIN_URL);
     }
     public function redirect($from = '')

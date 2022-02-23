@@ -18,14 +18,25 @@ class Visits extends Migration
                 'type'           => 'INT',
                 'unsigned'       => true,
             ],
-            'from'       => [
+            'os'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'to'       => [
+            'browser'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'extra'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'created_at'       => [
+                'type'       => 'datetime',
+            ],
+            'updated_at'       => [
+                'type'       => 'datetime',
+            ],
+
         ]);
         $this->forge->addKey('id', true);
         $this->forge->addForeignKey('redirect_id', 'redirects', 'id');
