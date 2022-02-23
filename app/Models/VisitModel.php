@@ -19,7 +19,8 @@ class VisitModel extends Model
         'os',
         'browser',
         'extra',
-        'referrer'
+        'referrer',
+        'user_id'
     ];
 
     // Dates
