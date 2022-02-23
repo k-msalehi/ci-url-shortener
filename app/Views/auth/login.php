@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>Login</title>
-   <link rel="stylesheet" href="<?php echo base_url('assets/css/w3.css') ?>">
+   <link rel="stylesheet" href="<?php echo base_url('public/assets/css/w3.css') ?>">
 </head>
 
 <body>
