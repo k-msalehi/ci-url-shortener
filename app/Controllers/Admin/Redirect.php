@@ -109,6 +109,8 @@ class Redirect extends BaseController
     {
         $tempDate = explode('-', $date);
         // checkdate(month, day, year)
+        if (count($tempDate) != 3)
+            return false;
         return checkdate($tempDate[1], $tempDate[2], $tempDate[0]);
     }
 }
