@@ -34,9 +34,9 @@ class Visits extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '500',
             ],
-            'extra'       => [
+            'device'       => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '32',
             ],
             'created_at'       => [
                 'type'       => 'datetime',
