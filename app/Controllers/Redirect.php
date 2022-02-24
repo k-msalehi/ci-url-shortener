@@ -30,8 +30,13 @@ class Redirect extends BaseController
         $agent = $this->request->getUserAgent();
 
         $browser = $agent->getBrowser() . ' ' . $agent->getVersion();
+        $device = 'desktop';
         if ($agent->isRobot()) {
             $browser = $agent->getRobot();
+            $device = 'bot';
+        }
+        if ($agent->isMobile()) {
+            $device = 'mobile';
         }
         $os = $agent->getPlatform();
         $referrer  = $agent->getReferrer();
@@ -58,6 +63,7 @@ class Redirect extends BaseController
             'referrer' => $referrer,
             'os' => $os,
             'browser' => $browser,
+            'device' => $device,
         ];
         $visit->insert($data);
     }
