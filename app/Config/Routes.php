@@ -29,6 +29,7 @@ $routes->setAutoRoute(true);
  * --------------------------------------------------------------------
  */
 $routes->add('login', 'Auth::login', ['as' => 'login']);
+$routes->add('logout', 'Auth::logout', ['as' => 'logout']);
 
 $routes->add('(:segment)', 'Redirect::redirect/$1');
 // We get a performance increase by specifying the default
