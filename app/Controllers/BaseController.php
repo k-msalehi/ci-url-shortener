@@ -50,7 +50,7 @@ class BaseController extends Controller
         // Preload any models, libraries, etc, here.
         // E.g.: $this->session = \Config\Services::session();
         $this->users = [
-            'admin' => '$2a$10$w4Ljxtdh8Fqy1IP7RSCsUO7rabD7/Wv5EpQG8aE/hrGAhSKN8o95u' // admin //
+            'admin' => '$2a$10$WlMyrh2FLmIJXpnRJl/eI.EZrfzK8X9nHXceLyvQgZSh33RDADvpO' ,// admin
            
         ];
         if (strpos(uri_string(), 'admin/') === 0) {
