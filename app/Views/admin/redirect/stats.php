@@ -18,7 +18,9 @@
          </b>
       </div>
       <div class="w3-section">
-         <a target="_blank" href="<?= $redirect['to'] ?>"> <?= MAIN_URL ?>/<?= $redirect['from']  ?></a>
+         <a target="_blank" href="<?= $redirect['to'] ?>"> <?= ($redirect['to']) ?></a><br>
+         <a target="_blank" href="<?= base_url($redirect['from']) ?>"> <?= base_url($redirect['from']) ?></a>
+
       </div>
       <div class="w3-section">
          <form action="">
