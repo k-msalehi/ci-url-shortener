@@ -13,7 +13,7 @@
 
 <body>
    <div>
-      menu 
+      <a href="<?=base_url('logout')?>">LogOut</a>
    </div>
    <div style='height:20px;'></div>
    <div style="padding: 10px">
