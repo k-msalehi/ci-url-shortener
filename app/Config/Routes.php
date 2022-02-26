@@ -28,6 +28,8 @@ $routes->setAutoRoute(true);
  * Route Definitions
  * --------------------------------------------------------------------
  */
+$routes->add('login', 'Auth::login', ['as' => 'login']);
+
 $routes->add('(:segment)', 'Redirect::redirect/$1');
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
@@ -46,7 +48,6 @@ $routes->group('admin/redirect', function ($routes) {
     $routes->add('export', 'Admin\Redirect::index');
 });
 
-$routes->get('login', 'Auth\login', ['as' => 'login']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing
