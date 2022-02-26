@@ -12,7 +12,7 @@
    <div class="w3-content  w3-section ">
       <div class="w3-card-4">
 
-         <form method="POST" action="/auth/loginCheck" class="w3-container w3-padding-large">
+         <form method="POST" action="/loginCheck" class="w3-container w3-padding-large">
             <p class="w3-text-red">
                <?php
                $session = session();

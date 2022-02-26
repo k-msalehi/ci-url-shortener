@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\Request;
 
-class Auth extends BaseController
+class AuthController extends BaseController
 {
     public function login()
     {
@@ -25,5 +25,12 @@ class Auth extends BaseController
             }
         }
         return redirect()->back()->with('error', 'incorrect uername or password!');
+    }
+
+    public function logout()
+    {
+        session()->regenerate();
+        session()->destroy();
+        return redirect('login');
     }
 }

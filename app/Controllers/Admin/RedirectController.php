@@ -7,7 +7,7 @@ use App\Libraries\GroceryCrud;
 use App\Models\RedirectModel;
 use App\Models\VisitModel;
 
-class Redirect extends BaseController
+class RedirectController extends BaseController
 {
     public function index()
     {
