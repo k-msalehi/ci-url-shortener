@@ -7,7 +7,7 @@ use App\Models\RedirectModel;
 use App\Models\VisitModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 
-class Redirect extends BaseController
+class RedirectController extends BaseController
 {
     public function index()
     {
