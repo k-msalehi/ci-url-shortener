@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Redirect');
+$routes->setDefaultController('RedirectController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -33,7 +33,7 @@ $routes->add('logout', 'AuthController::logout', ['as' => 'logout']);
 $routes->add('loginCheck', 'AuthController::loginCheck');
 $routes->add('admin/redirect/stats/(:num)', 'Admin\RedirectController::stats/$1');
 
-$routes->add('(:segment)', 'Redirect::redirect/$1');
+$routes->add('(:segment)', 'RedirectController::redirect/$1');
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->group('admin/redirect', function ($routes) {
