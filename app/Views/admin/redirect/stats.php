@@ -104,8 +104,8 @@
             </div>
          </div>
          <div class="w3-row">
-            <table class="w3-table w3-table-all w3-section">
-               <tr>
+            <table class="w3-table w3-table-all w3-hoverable w3-section">
+               <tr class="w3-black">
                   <td>Referrer</td>
                   <td>No. of reffer</td>
                </tr>
