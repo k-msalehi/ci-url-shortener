@@ -58,11 +58,11 @@ class RedirectController extends BaseController
         }
         $data['uVisits'] = $uVisits->distinct()->get()->getResult();
         $data['totalVisits'] =  $totalVisits->findAll();
-
         $data['browsers'] = [];
         $data['os'] = [];
         $data['device'] = [];
         foreach ($data['totalVisits']  as $visit) {
+            $data['referrer'][] =$visit['referrer'];
             if (stripos($visit['device'], 'mobile') === 0) {
                 $data['device']['mobile'][] = $visit['device'];
             } elseif (stripos($visit['device'], 'desktop') === 0) {
@@ -99,6 +99,11 @@ class RedirectController extends BaseController
                 $data['browsers']['other'][] =  $visit['browser'];
             }
         }
+        sort($data['referrer']);
+        $data['referrer'] = array_count_values($data['referrer']);
+        $data['referrer']['No referrer'] = $data['referrer'][''];
+        unset($data['referrer']['']);
+
         ksort($data['browsers']);
         ksort($data['os']);
         ksort($data['device']);

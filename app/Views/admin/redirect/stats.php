@@ -103,6 +103,28 @@
                ?>
             </div>
          </div>
+         <div class="w3-row">
+            <table class="w3-table w3-table-all w3-section">
+               <tr>
+                  <td>Referrer</td>
+                  <td>No. of reffer</td>
+               </tr>
+               <?php
+               foreach ($referrer as $key => $val) {
+               ?>
+                  <tr>
+                     <td>
+                        <span class="stats-title"><?= $key ?>:</span>
+                     </td>
+                     <td>
+                        <span class="stats-title"><?= $val ?></span>
+                     </td>
+                  </tr>
+               <?php
+               }
+               ?>
+            </table>
+         </div>
       </div>
 </body>
 
