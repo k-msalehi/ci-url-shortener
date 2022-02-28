@@ -99,11 +99,10 @@ class RedirectController extends BaseController
                 $data['browsers']['other'][] =  $visit['browser'];
             }
         }
-        sort($data['referrer']);
         $data['referrer'] = array_count_values($data['referrer']);
         $data['referrer']['No referrer'] = $data['referrer'][''];
         unset($data['referrer']['']);
-
+        arsort($data['referrer']);
         ksort($data['browsers']);
         ksort($data['os']);
         ksort($data['device']);
