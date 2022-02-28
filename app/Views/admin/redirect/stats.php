@@ -114,7 +114,7 @@
                ?>
                   <tr>
                      <td>
-                        <span class="stats-title"><?= $key ?>:</span>
+                        <span class="stats-title"><?= $key ?></span>
                      </td>
                      <td>
                         <span class="stats-title"><?= $val ?></span>
