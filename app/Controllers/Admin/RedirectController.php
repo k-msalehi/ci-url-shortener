@@ -101,6 +101,7 @@ class RedirectController extends BaseController
             }
         }
         $data['referrer'] = array_count_values($data['referrer']);
+        //check is '' index exists
         if (isset($data['referrer']['']))
             $data['referrer']['No referrer'] = $data['referrer'][''];
         unset($data['referrer']['']);
