@@ -61,8 +61,9 @@ class RedirectController extends BaseController
         $data['browsers'] = [];
         $data['os'] = [];
         $data['device'] = [];
+        $data['referrer'] = [];
         foreach ($data['totalVisits']  as $visit) {
-            $data['referrer'][] =$visit['referrer'];
+            $data['referrer'][] = $visit['referrer'];
             if (stripos($visit['device'], 'mobile') === 0) {
                 $data['device']['mobile'][] = $visit['device'];
             } elseif (stripos($visit['device'], 'desktop') === 0) {
@@ -100,7 +101,8 @@ class RedirectController extends BaseController
             }
         }
         $data['referrer'] = array_count_values($data['referrer']);
-        $data['referrer']['No referrer'] = $data['referrer'][''];
+        if (isset($data['referrer']['']))
+            $data['referrer']['No referrer'] = $data['referrer'][''];
         unset($data['referrer']['']);
         arsort($data['referrer']);
         ksort($data['browsers']);

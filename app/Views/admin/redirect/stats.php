@@ -7,7 +7,11 @@
    <title>Stats</title>
    <link rel="stylesheet" href="<?php echo base_url('public/assets/css/w3.css') ?>">
 </head>
-
+<style>
+   table.report td{
+      word-break:break-all;
+   }
+</style>
 <body>
    <div class="w3-container">
       <div class="w3-section">
@@ -104,7 +108,7 @@
             </div>
          </div>
          <div class="w3-row">
-            <table class="w3-table w3-table-all w3-hoverable w3-section">
+            <table class="w3-table w3-table-all w3-hoverable w3-section report">
                <tr class="w3-black">
                   <td>Referrer</td>
                   <td>No. of reffer</td>
