@@ -8,10 +8,11 @@
    <link rel="stylesheet" href="<?php echo base_url('public/assets/css/w3.css') ?>">
 </head>
 <style>
-   table.report td{
-      word-break:break-all;
+   table.report td {
+      word-break: break-all;
    }
 </style>
+
 <body>
    <div class="w3-container">
       <div class="w3-section">
@@ -38,10 +39,10 @@
       </div>
       <div class="w3-row">
          <div class="w3-half">
-            <h4>
-               By Hits
-            </h4>
             <div class="w3-margin">
+               <h4>
+                  By Hits
+               </h4>
                <div class="w3-section w3-border w3-padding">
                   <span class="stats-title">Total visitors:</span>
                   <span class="stats-title"><?= count($uVisits) ?></span>
