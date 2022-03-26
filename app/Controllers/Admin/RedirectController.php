@@ -82,6 +82,8 @@ class RedirectController extends BaseController
                 $data['os']['linux'][] =  $visit['os'];
             } elseif (stripos($visit['os'], 'gnu') === 0) {
                 $data['os']['linux'][] =  $visit['os'];
+            } elseif (stripos($visit['os'], 'mac os') === 0) {
+                $data['os']['mac'][] =  $visit['os'];
             } else {
                 $data['os']['other'][] =  $visit['os'];
             }
